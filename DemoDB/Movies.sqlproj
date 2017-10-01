@@ -64,4 +64,5 @@
     <Build Include="dbo\Tables\Title.sql" />
     <Build Include="dbo\Tables\Director.sql" />
   </ItemGroup>
+  <Import Project="..\packages\OctoPack.3.6.1\build\OctoPack.targets" />
 </Project>
