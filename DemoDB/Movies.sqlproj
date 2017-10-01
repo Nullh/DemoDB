@@ -64,5 +64,11 @@
     <Build Include="dbo\Tables\Title.sql" />
     <Build Include="dbo\Tables\Director.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Movies.nuspec" />
+    <None Include="Deploy.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="..\packages\OctoPack.3.6.1\build\OctoPack.targets" />
 </Project>
