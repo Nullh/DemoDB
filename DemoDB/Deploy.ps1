@@ -28,7 +28,7 @@ Add-Type -path "C:\Program Files\Microsoft SQL Server\130\DAC\bin\Microsoft.SqlS
 $d = New-Object Microsoft.SqlServer.Dac.DacServices ("data source=(local);User Id = " + $dbUser + ";pwd=" + $dbPassword)
  
 #Load the dacpac
-$dacpac = (Get-Location).Path + "Content\Movies.dacpac"
+$dacpac = (Get-Location).Path + "\Content\Movies.dacpac"
 #$dacpacoptions = (Get-Location).Path + "Content\" +  $dbPublishProfile + ".publish.xml"
  
 Write-Host $dacpac
