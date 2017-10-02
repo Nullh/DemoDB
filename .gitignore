@@ -260,5 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 
-!*/OctoPack.Tasks.dll
-!*/NuGet.exe
+!**/*/OctoPack.Tasks.dll
+!**/*/NuGet.exe
