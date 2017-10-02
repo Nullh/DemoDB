@@ -7,7 +7,7 @@
  <description>Package for Movies DB</description>
  </metadata>
  <files>
- <file src="DemoDB\bin\Release\Movies.dacpac" target="Content" />
- <file src="DemoDB\bin\Release\Deploy.ps1" />
+ <file src="bin\Release\Movies.dacpac" target="Content" />
+ <file src="bin\Release\Deploy.ps1" />
  </files>
 </package>
