@@ -22,23 +22,32 @@ if (! $dbPassword)
  
 # Add the DLL
 # For 64-bit machines
-Add-Type -path "${Env:ProgramFiles(x86)}Microsoft SQL Server110DACbinMicrosoft.SqlServer.Dac.dll"
+Add-Type -path "${Env:ProgramFiles(x86)}\Microsoft SQL Server\110\DAC\bin\Microsoft.SqlServer.Dac.dll"
  
 # Create the connection string
 $d = New-Object Microsoft.SqlServer.Dac.DacServices ("data source=(local);User Id = " + $dbUser + ";pwd=" + $dbPassword)
  
 #Load the dacpac
-$dacpac = (Get-Location).Path + "ContentDatabase.dacpac"
-$dacpacoptions = (Get-Location).Path + "Content" +  $dbPublishProfile + ".publish.xml"
+$dacpac = (Get-Location).Path + "Content\Movies.dacpac"
+#$dacpacoptions = (Get-Location).Path + "Content\" +  $dbPublishProfile + ".publish.xml"
  
 Write-Host $dacpac
 Write-Host $dacpacoptions
+
+# Set the DacDeployOptions
+$options = New-Object Microsoft.SqlServer.Dac.DacDeployOptions -Property @{
+ 'BlockOnPossibleDataLoss' = $true;
+ 'DropObjectsNotInSource' = $false;
+ 'ScriptDatabaseOptions' = $true;
+ 'IgnorePermissions' = $true;
+ 'IgnoreRoleMembership' = $true
+}
  
 #Load dacpac from file & deploy to database
 $dp = [Microsoft.SqlServer.Dac.DacPackage]::Load($dacpac)
  
 #Read a publish profile XML to get the deployment options
-$dacProfile = [Microsoft.SqlServer.Dac.DacProfile]::Load($dacpacoptions)
+#$dacProfile = [Microsoft.SqlServer.Dac.DacProfile]::Load($dacpacoptions)
  
 # Deploy the dacpac
-$d.Deploy($dp, $dbName, $true, $dacProfile.DeployOptions)
+$d.Deploy($dp, $dbName, $true, $options)

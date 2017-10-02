@@ -8,7 +8,7 @@
   </metadata>
   <files>
     <file src="bin\Release\Movies.dacpac" target="Content" />
-    <file src="obj\Release\Model.xml" target="Content" />
+    <file src="Settings.xml" target="Content" />
     <file src="Deploy.ps1" />
   </files>
 </package>
