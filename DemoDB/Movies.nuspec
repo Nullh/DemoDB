@@ -17,7 +17,7 @@
    <file src="obj\**\*.xml"
            target="Content\Deploy" />
    <!-- Your .dacpac location -->
-   <file src="..\..\..\..\..\..\bin\**\*.dacpac"
+   <file src="bin\**\*.dacpac"
            target="Content\Deploy" />  
  </files>
 </package>
