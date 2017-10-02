@@ -7,7 +7,17 @@
  <description>Package for Movies DB</description>
  </metadata>
  <files>
- <file src="bin\Release\Movies.dacpac" target="Content" />
- <file src="bin\Release\Deploy.ps1" />
+ <!--<file src="bin\Release\Movies.dacpac" target="Content" />
+ <file src="bin\Release\Deploy.ps1" />-->
+   <file src="\dbo\**\*.sql"
+          target="Content\Schema"/>
+   <!-- The deployment script -->
+   <file src="\obj\**\*.sql"
+           target="Content\Deploy" />
+   <file src="\obj\**\*.xml"
+           target="Content\Deploy" />
+   <!-- Your .dacpac location -->
+   <file src="..\..\..\..\..\..\bin\**\*.dacpac"
+           target="Content\Deploy" />  
  </files>
 </package>
