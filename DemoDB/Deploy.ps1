@@ -22,7 +22,7 @@ if (! $dbPassword)
  
 # Add the DLL
 # For 64-bit machines
-Add-Type -path "${Env:ProgramFiles(x86)}\Microsoft SQL Server\110\DAC\bin\Microsoft.SqlServer.Dac.dll"
+Add-Type -path "C:\Program Files\Microsoft SQL Server\130\DAC\bin\Microsoft.SqlServer.Dac.dll"
  
 # Create the connection string
 $d = New-Object Microsoft.SqlServer.Dac.DacServices ("data source=(local);User Id = " + $dbUser + ";pwd=" + $dbPassword)
