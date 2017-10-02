@@ -29,7 +29,7 @@ $d = New-Object Microsoft.SqlServer.Dac.DacServices ("data source=(local);User I
  
 #Load the dacpac
 $dacpac = (Get-Location).Path + "\Content\Movies.dacpac"
-#$dacpacoptions = (Get-Location).Path + "Content\" +  $dbPublishProfile + ".publish.xml"
+#$dacpacoptions = (Get-Location).Path + "\Content\" +  $dbPublishProfile + ".publish.xml"
  
 Write-Host $dacpac
 Write-Host $dacpacoptions
