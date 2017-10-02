@@ -21,3 +21,18 @@
            target="Content\Deploy" />  
  </files>
 </package>
+
+<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Movies</id>
+    <version>1.0.0.0</version>
+    <authors>Neil Holmes</authors>
+    <description>NuGet package for DB</description>
+  </metadata>
+  <files>
+    <file src="bin\Release\Movies.dacpac" target="Content" />
+    <file src="obj\Release\Model.xml" target="Content" />
+    <file src="Deploy.ps1" />
+  </files>
+</package>
