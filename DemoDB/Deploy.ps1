@@ -4,11 +4,6 @@ if (! $dbName)
     Write-Host "Missing required variable dbName" -ForegroundColor Yellow
     exit 1
 }
-if (! $dbPublishProfile)
-{
-    Write-Host "Missing required variable dbPublishProfile" -ForegroundColor Yellow
-    exit 1
-}
 if (! $dbUser)
 {
     Write-Host "Missing required variable dbUser" -ForegroundColor Yellow
