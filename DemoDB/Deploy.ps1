@@ -32,7 +32,7 @@ Write-Host $dacpacoptions
 # Set the DacDeployOptions
 $options = New-Object Microsoft.SqlServer.Dac.DacDeployOptions -Property @{
  'BlockOnPossibleDataLoss' = $true;
- 'DropObjectsNotInSource' = $false;
+ 'DropObjectsNotInSource' = $true;
  'ScriptDatabaseOptions' = $true;
  'IgnorePermissions' = $true;
  'IgnoreRoleMembership' = $true
