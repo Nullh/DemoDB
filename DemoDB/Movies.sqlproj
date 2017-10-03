@@ -71,5 +71,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Movies.refactorlog" />
+  </ItemGroup>
   <Import Project="..\packages\OctoPack.3.6.1\build\OctoPack.targets" />
 </Project>
