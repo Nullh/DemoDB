@@ -1,4 +1,4 @@
 ﻿CREATE PROCEDURE [dbo].[SelectFoo]
 AS
-	SELECT 'FOO'
+	SELECT 'FOO';
 RETURN 0
