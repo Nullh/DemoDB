@@ -63,6 +63,7 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Title.sql" />
     <Build Include="dbo\Tables\Director.sql" />
+    <Build Include="dbo\Tables\Tets.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Movies.nuspec" />
