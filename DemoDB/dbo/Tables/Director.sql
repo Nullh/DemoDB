@@ -4,3 +4,7 @@
     [Name] NVARCHAR(50) NOT NULL, 
     [Nationality] NVARCHAR(20) NULL
 )
+
+GO
+
+CREATE INDEX [I_Nationaility] ON [dbo].[Director] ([Nationality])

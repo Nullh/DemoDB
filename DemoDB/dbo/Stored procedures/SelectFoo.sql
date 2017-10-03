@@ -1,0 +1,4 @@
+﻿CREATE PROCEDURE [dbo].[SelectFoo]
+AS
+	SELECT 'FOO'
+RETURN 0

@@ -59,11 +59,12 @@
     <Folder Include="Properties" />
     <Folder Include="dbo" />
     <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Stored procedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Title.sql" />
     <Build Include="dbo\Tables\Director.sql" />
-    <Build Include="dbo\Tables\TestTable.sql" />
+    <Build Include="dbo\Stored procedures\SelectFoo.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Movies.nuspec" />
